@@ -11,7 +11,7 @@ MODEL_CORE=../models/core/
 
 # Defining a default model
 SVM_MODEL_OPTIONS=	-t 0 -c 1 -m 200 -e 0.0001 -q
-LIBLINEAR_MODEL_OPTIONS= -s 7 -c 0.5
+LIBLINEAR_MODEL_OPTIONS= -s 0 -c 1
 CLASSIFIER_LIBRARY= svm
 MODEL_ROOT	=	$(DATA_ROOT)
 MODEL_OUTDIR= 	$(MODEL_ROOT)/out/
@@ -334,13 +334,14 @@ lr_sre15_tcc_tf-idf_imb: CLASSIFIER_LIBRARY = liblinear
 lr_sre15_tcc_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
 lr_sre15_tcc_tf-idf_imb: core
 
-sre15_tcc_w2v_imb: TASK_TYPE = ttk
-sre15_tcc_w2v_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-sre15_tcc_w2v_imb: TEST_TABLE = ttk_test_noname
-sre15_tcc_w2v_imb: TRAIN_TABLE = ttk_train_noname
-sre15_tcc_w2v_imb: MODEL_NAME = w2v
-sre15_tcc_w2v_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
-sre15_tcc_w2v_imb: core
+lr_sre15_tcc_w2v_imb: TASK_TYPE = ttk
+lr_sre15_tcc_w2v_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_w2v_imb: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_w2v_imb: TRAIN_TABLE = ttk_train_noname
+lr_sre15_tcc_w2v_imb: MODEL_NAME = w2v
+lr_sre15_tcc_w2v_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_w2v_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_w2v_imb: core
 
 svm_sre15_tcc_bow_imb: TASK_TYPE = ttk
 svm_sre15_tcc_bow_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
