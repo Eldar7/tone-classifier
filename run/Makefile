@@ -364,7 +364,6 @@ svm_sre15_tcc_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = svm
 svm_sre15_tcc_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
 svm_sre15_tcc_tf-idf-delta-prop-smoothed_imb: core
 
-###
 svm_sre15_tcc_tf-idf_bal: TASK_TYPE = ttk
 svm_sre15_tcc_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
 svm_sre15_tcc_tf-idf_bal: TEST_TABLE = ttk_test_noname
@@ -409,8 +408,6 @@ svm_sre15_tcc_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smo
 svm_sre15_tcc_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = svm
 svm_sre15_tcc_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
 svm_sre15_tcc_tf-idf-delta-prop-smoothed_bal: core
-
-###
 
 svm_sre15_bank_tf-idf_imb: TASK_TYPE = bank
 svm_sre15_bank_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
@@ -501,52 +498,51 @@ svm_sre15_bank_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_sm
 svm_sre15_bank_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = svm
 svm_sre15_bank_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
 svm_sre15_bank_tf-idf-delta-prop-smoothed_bal: core
-###
 
-lr_sre15_bank_tf-idf_imb: TASK_TYPE = bank
-lr_sre15_bank_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-lr_sre15_bank_tf-idf_imb: TEST_TABLE = bank_test_noname
-lr_sre15_bank_tf-idf_imb: TRAIN_TABLE = bank_train_noname
-lr_sre15_bank_tf-idf_imb: MODEL_NAME = tf_idf
-lr_sre15_bank_tf-idf_imb: CLASSIFIER_LIBRARY = liblinear
-lr_sre15_bank_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2015)$(TASK_TYPE)_etalon.xml
-lr_sre15_bank_tf-idf_imb: core
+svm_sre16_tcc_tf-idf_imb: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf_imb: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf_imb: TRAIN_TABLE = ttk_train_2016
+svm_sre16_tcc_tf-idf_imb: MODEL_NAME = tf_idf
+svm_sre16_tcc_tf-idf_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf_imb: core
 
-lr_sre15_bank_tf-idf_bal: TASK_TYPE = bank
-lr_sre15_bank_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-lr_sre15_bank_tf-idf_bal: TEST_TABLE = bank_test_noname
-lr_sre15_bank_tf-idf_bal: TRAIN_TABLE = bank_train_balanced
-lr_sre15_bank_tf-idf_bal: MODEL_NAME = tf_idf
-lr_sre15_bank_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
-lr_sre15_bank_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
-lr_sre15_bank_tf-idf_bal: core
+svm_sre16_tcc_tf-idf-delta_imb: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta_imb: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta_imb: TRAIN_TABLE = ttk_train_2016
+svm_sre16_tcc_tf-idf-delta_imb: MODEL_NAME = tf_idf_delta
+svm_sre16_tcc_tf-idf-delta_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta_imb: core
 
-lr_sre15_bank_tf-idf-delta_bal: TASK_TYPE = bank
-lr_sre15_bank_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-lr_sre15_bank_tf-idf-delta_bal: TEST_TABLE = bank_test_noname
-lr_sre15_bank_tf-idf-delta_bal: TRAIN_TABLE = bank_train_balanced
-lr_sre15_bank_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
-lr_sre15_bank_tf-idf-delta_bal: CLASSIFIER_LIBRARY = liblinear
-lr_sre15_bank_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
-lr_sre15_bank_tf-idf-delta_bal: core
+svm_sre16_tcc_tf-idf-delta-bm25_imb: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta-bm25_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta-bm25_imb: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta-bm25_imb: TRAIN_TABLE = ttk_train_2016
+svm_sre16_tcc_tf-idf-delta-bm25_imb: MODEL_NAME = tf_idf_delta_bm25
+svm_sre16_tcc_tf-idf-delta-bm25_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta-bm25_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta-bm25_imb: core
 
-svm_sre16_bank_tf-idf_bal: TASK_TYPE = bank
-svm_sre16_bank_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-svm_sre16_bank_tf-idf_bal: TEST_TABLE = bank_test_2016
-svm_sre16_bank_tf-idf_bal: TRAIN_TABLE = bank_train_balanced_2016
-svm_sre16_bank_tf-idf_bal: MODEL_NAME = tf_idf
-svm_sre16_bank_tf-idf_bal: CLASSIFIER_LIBRARY = svm
-svm_sre16_bank_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
-svm_sre16_bank_tf-idf_bal: core
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: TRAIN_TABLE = ttk_train_2016
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: MODEL_NAME = tf_idf_delta_smoothed
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta-smoothed_imb: core
 
-lr_sre16_bank_tf-idf_bal: TASK_TYPE = bank
-lr_sre16_bank_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-lr_sre16_bank_tf-idf_bal: TEST_TABLE = bank_test_2016
-lr_sre16_bank_tf-idf_bal: TRAIN_TABLE = bank_train_balanced_2016
-lr_sre16_bank_tf-idf_bal: MODEL_NAME = tf_idf
-lr_sre16_bank_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
-lr_sre16_bank_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
-lr_sre16_bank_tf-idf_bal: core
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: TRAIN_TABLE = ttk_train_2016
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: MODEL_NAME = tf_idf_delta_prop_smoothed
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_imb: core
 
 svm_sre16_tcc_tf-idf_bal: TASK_TYPE = ttk
 svm_sre16_tcc_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
@@ -557,14 +553,133 @@ svm_sre16_tcc_tf-idf_bal: CLASSIFIER_LIBRARY = svm
 svm_sre16_tcc_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
 svm_sre16_tcc_tf-idf_bal: core
 
-lr_sre16_tcc_tf-idf_bal: TASK_TYPE = ttk
-lr_sre16_tcc_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
-lr_sre16_tcc_tf-idf_bal: TEST_TABLE = ttk_test_2016
-lr_sre16_tcc_tf-idf_bal: TRAIN_TABLE = ttk_train_balanced_2016
-lr_sre16_tcc_tf-idf_bal: MODEL_NAME = tf_idf
-lr_sre16_tcc_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
-lr_sre16_tcc_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
-lr_sre16_tcc_tf-idf_bal: core
+svm_sre16_tcc_tf-idf-delta_bal: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta_bal: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta_bal: TRAIN_TABLE = ttk_train_balanced_2016
+svm_sre16_tcc_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
+svm_sre16_tcc_tf-idf-delta_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta_bal: core
+
+svm_sre16_tcc_tf-idf-delta-bm25_bal: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta-bm25_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta-bm25_bal: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta-bm25_bal: TRAIN_TABLE = ttk_train_balanced_2016
+svm_sre16_tcc_tf-idf-delta-bm25_bal: MODEL_NAME = tf_idf_delta_bm25
+svm_sre16_tcc_tf-idf-delta-bm25_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta-bm25_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta-bm25_bal: core
+
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: TRAIN_TABLE = ttk_train_balanced_2016
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: MODEL_NAME = tf_idf_delta_smoothed
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta-smoothed_bal: core
+
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: TASK_TYPE = ttk
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: TEST_TABLE = ttk_test_2016
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: TRAIN_TABLE = ttk_train_balanced_2016
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smoothed
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_tcc_tf-idf-delta-prop-smoothed_bal: core
+
+svm_sre16_bank_tf-idf_imb: TASK_TYPE = bank
+svm_sre16_bank_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf_imb: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf_imb: TRAIN_TABLE = bank_train_2016
+svm_sre16_bank_tf-idf_imb: MODEL_NAME = tf_idf
+svm_sre16_bank_tf-idf_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf_imb: core
+
+svm_sre16_bank_tf-idf-delta_imb: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta_imb: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta_imb: TRAIN_TABLE = bank_train_2016
+svm_sre16_bank_tf-idf-delta_imb: MODEL_NAME = tf_idf_delta
+svm_sre16_bank_tf-idf-delta_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta_imb: core
+
+svm_sre16_bank_tf-idf-delta-bm25_imb: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta-bm25_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta-bm25_imb: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta-bm25_imb: TRAIN_TABLE = bank_train_2016
+svm_sre16_bank_tf-idf-delta-bm25_imb: MODEL_NAME = tf_idf_delta_bm25
+svm_sre16_bank_tf-idf-delta-bm25_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta-bm25_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta-bm25_imb: core
+
+svm_sre16_bank_tf-idf-delta-smoothed_imb: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta-smoothed_imb: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta-smoothed_imb: TRAIN_TABLE = bank_train_2016
+svm_sre16_bank_tf-idf-delta-smoothed_imb: MODEL_NAME = tf_idf_delta_smoothed
+svm_sre16_bank_tf-idf-delta-smoothed_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta-smoothed_imb: core
+
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: TRAIN_TABLE = bank_train_2016
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: MODEL_NAME = tf_idf_delta_prop_smoothed
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta-prop-smoothed_imb: core
+
+svm_sre16_bank_tf-idf_bal: TASK_TYPE = bank
+svm_sre16_bank_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf_bal: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf_bal: TRAIN_TABLE = bank_train_balanced_2016
+svm_sre16_bank_tf-idf_bal: MODEL_NAME = tf_idf
+svm_sre16_bank_tf-idf_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf_bal: core
+
+svm_sre16_bank_tf-idf-delta_bal: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta_bal: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta_bal: TRAIN_TABLE = bank_train_balanced_2016
+svm_sre16_bank_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
+svm_sre16_bank_tf-idf-delta_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta_bal: core
+
+svm_sre16_bank_tf-idf-delta-bm25_bal: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta-bm25_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta-bm25_bal: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta-bm25_bal: TRAIN_TABLE = bank_train_balanced_2016
+svm_sre16_bank_tf-idf-delta-bm25_bal: MODEL_NAME = tf_idf_delta_bm25
+svm_sre16_bank_tf-idf-delta-bm25_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta-bm25_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta-bm25_bal: core
+
+svm_sre16_bank_tf-idf-delta-smoothed_bal: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta-smoothed_bal: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta-smoothed_bal: TRAIN_TABLE = bank_train_balanced_2016
+svm_sre16_bank_tf-idf-delta-smoothed_bal: MODEL_NAME = tf_idf_delta_smoothed
+svm_sre16_bank_tf-idf-delta-smoothed_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta-smoothed_bal: core
+
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: TASK_TYPE = bank
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: TEST_TABLE = bank_test_2016
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: TRAIN_TABLE = bank_train_balanced_2016
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smoothed
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = svm
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+svm_sre16_bank_tf-idf-delta-prop-smoothed_bal: core
+
+###
 
 lr_sre15_tcc_tf-idf_imb: TASK_TYPE = ttk
 lr_sre15_tcc_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
@@ -593,6 +708,15 @@ lr_sre15_tcc_tf-idf-delta-bm25_imb: CLASSIFIER_LIBRARY = liblinear
 lr_sre15_tcc_tf-idf-delta-bm25_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
 lr_sre15_tcc_tf-idf-delta-bm25_imb: core
 
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: TASK_TYPE = ttk
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: TRAIN_TABLE = ttk_train_noname
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_tf-idf-delta-smoothed_imb: core
+
 lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: TASK_TYPE = ttk
 lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
 lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: TEST_TABLE = ttk_test_noname
@@ -601,6 +725,321 @@ lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: MODEL_NAME = tf_idf_delta_prop_smoo
 lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
 lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
 lr_sre15_tcc_tf-idf-delta-prop-smoothed_imb: core
+
+lr_sre15_tcc_tf-idf_bal: TASK_TYPE = ttk
+lr_sre15_tcc_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_tf-idf_bal: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_tf-idf_bal: TRAIN_TABLE = ttk_train_balanced
+lr_sre15_tcc_tf-idf_bal: MODEL_NAME = tf_idf
+lr_sre15_tcc_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_tf-idf_bal: core
+
+lr_sre15_tcc_tf-idf-delta_bal: TASK_TYPE = ttk
+lr_sre15_tcc_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_tf-idf-delta_bal: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_tf-idf-delta_bal: TRAIN_TABLE = ttk_train_balanced
+lr_sre15_tcc_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
+lr_sre15_tcc_tf-idf-delta_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_tf-idf-delta_bal: core
+
+lr_sre15_tcc_tf-idf-delta-bm25_bal: TASK_TYPE = ttk
+lr_sre15_tcc_tf-idf-delta-bm25_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_tf-idf-delta-bm25_bal: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_tf-idf-delta-bm25_bal: TRAIN_TABLE = ttk_train_balanced
+lr_sre15_tcc_tf-idf-delta-bm25_bal: MODEL_NAME = tf_idf_delta_bm25
+lr_sre15_tcc_tf-idf-delta-bm25_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_tf-idf-delta-bm25_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_tf-idf-delta-bm25_bal: core
+
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: TASK_TYPE = ttk
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: TRAIN_TABLE = ttk_train_balanced
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_tf-idf-delta-smoothed_bal: core
+
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: TASK_TYPE = ttk
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: TEST_TABLE = ttk_test_noname
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: TRAIN_TABLE = ttk_train_balanced
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_tcc_tf-idf-delta-prop-smoothed_bal: core
+
+lr_sre15_bank_tf-idf_imb: TASK_TYPE = bank
+lr_sre15_bank_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf_imb: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf_imb: TRAIN_TABLE = bank_train_noname
+lr_sre15_bank_tf-idf_imb: MODEL_NAME = tf_idf
+lr_sre15_bank_tf-idf_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2015)$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf_imb: core
+
+lr_sre15_bank_tf-idf-delta_imb: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta_imb: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta_imb: TRAIN_TABLE = bank_train_noname
+lr_sre15_bank_tf-idf-delta_imb: MODEL_NAME = tf_idf_delta
+lr_sre15_bank_tf-idf-delta_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta_imb: ETALON_RESULT = $(SENTIRUEVAL2015)$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta_imb: core
+
+lr_sre15_bank_tf-idf-delta-bm25_imb: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta-bm25_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta-bm25_imb: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta-bm25_imb: TRAIN_TABLE = bank_train_noname
+lr_sre15_bank_tf-idf-delta-bm25_imb: MODEL_NAME = tf_idf_delta_bm25
+lr_sre15_bank_tf-idf-delta-bm25_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta-bm25_imb: ETALON_RESULT = $(SENTIRUEVAL2015)$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta-bm25_imb: core
+
+lr_sre15_bank_tf-idf-delta-smoothed_imb: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta-smoothed_imb: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta-smoothed_imb: TRAIN_TABLE = bank_train_noname
+lr_sre15_bank_tf-idf-delta-smoothed_imb: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre15_bank_tf-idf-delta-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2015)$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta-smoothed_imb: core
+
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: TRAIN_TABLE = bank_train_noname
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2015)$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta-prop-smoothed_imb: core
+
+lr_sre15_bank_tf-idf_bal: TASK_TYPE = bank
+lr_sre15_bank_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf_bal: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf_bal: TRAIN_TABLE = bank_train_balanced
+lr_sre15_bank_tf-idf_bal: MODEL_NAME = tf_idf
+lr_sre15_bank_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf_bal: core
+
+lr_sre15_bank_tf-idf-delta_bal: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta_bal: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta_bal: TRAIN_TABLE = bank_train_balanced
+lr_sre15_bank_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
+lr_sre15_bank_tf-idf-delta_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta_bal: core
+
+lr_sre15_bank_tf-idf-delta-bm25_bal: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta-bm25_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta-bm25_bal: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta-bm25_bal: TRAIN_TABLE = bank_train_balanced
+lr_sre15_bank_tf-idf-delta-bm25_bal: MODEL_NAME = tf_idf_delta_bm25
+lr_sre15_bank_tf-idf-delta-bm25_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta-bm25_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta-bm25_bal: core
+
+lr_sre15_bank_tf-idf-delta-smoothed_bal: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta-smoothed_bal: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta-smoothed_bal: TRAIN_TABLE = bank_train_balanced
+lr_sre15_bank_tf-idf-delta-smoothed_bal: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre15_bank_tf-idf-delta-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta-smoothed_bal: core
+
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: TASK_TYPE = bank
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: TEST_TABLE = bank_test_noname
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: TRAIN_TABLE = bank_train_balanced
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2015)/$(TASK_TYPE)_etalon.xml
+lr_sre15_bank_tf-idf-delta-prop-smoothed_bal: core
+
+lr_sre16_tcc_tf-idf_imb: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf_imb: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf_imb: TRAIN_TABLE = ttk_train_2016
+lr_sre16_tcc_tf-idf_imb: MODEL_NAME = tf_idf
+lr_sre16_tcc_tf-idf_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf_imb: core
+
+lr_sre16_tcc_tf-idf-delta_imb: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta_imb: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta_imb: TRAIN_TABLE = ttk_train_2016
+lr_sre16_tcc_tf-idf-delta_imb: MODEL_NAME = tf_idf_delta
+lr_sre16_tcc_tf-idf-delta_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta_imb: core
+
+lr_sre16_tcc_tf-idf-delta-bm25_imb: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta-bm25_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta-bm25_imb: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta-bm25_imb: TRAIN_TABLE = ttk_train_2016
+lr_sre16_tcc_tf-idf-delta-bm25_imb: MODEL_NAME = tf_idf_delta_bm25
+lr_sre16_tcc_tf-idf-delta-bm25_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta-bm25_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta-bm25_imb: core
+
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: TRAIN_TABLE = ttk_train_2016
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta-smoothed_imb: core
+
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: TRAIN_TABLE = ttk_train_2016
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_imb: core
+
+lr_sre16_tcc_tf-idf_bal: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf_bal: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf_bal: TRAIN_TABLE = ttk_train_balanced_2016
+lr_sre16_tcc_tf-idf_bal: MODEL_NAME = tf_idf
+lr_sre16_tcc_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf_bal: core
+
+lr_sre16_tcc_tf-idf-delta_bal: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta_bal: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta_bal: TRAIN_TABLE = ttk_train_balanced_2016
+lr_sre16_tcc_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
+lr_sre16_tcc_tf-idf-delta_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta_bal: core
+
+lr_sre16_tcc_tf-idf-delta-bm25_bal: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta-bm25_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta-bm25_bal: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta-bm25_bal: TRAIN_TABLE = ttk_train_balanced_2016
+lr_sre16_tcc_tf-idf-delta-bm25_bal: MODEL_NAME = tf_idf_delta_bm25
+lr_sre16_tcc_tf-idf-delta-bm25_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta-bm25_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta-bm25_bal: core
+
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: TRAIN_TABLE = ttk_train_balanced_2016
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta-smoothed_bal: core
+
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: TASK_TYPE = ttk
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: TEST_TABLE = ttk_test_2016
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: TRAIN_TABLE = ttk_train_balanced_2016
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_tcc_tf-idf-delta-prop-smoothed_bal: core
+
+lr_sre16_bank_tf-idf_imb: TASK_TYPE = bank
+lr_sre16_bank_tf-idf_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf_imb: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf_imb: TRAIN_TABLE = bank_train_2016
+lr_sre16_bank_tf-idf_imb: MODEL_NAME = tf_idf
+lr_sre16_bank_tf-idf_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf_imb: core
+
+lr_sre16_bank_tf-idf-delta_imb: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta_imb: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta_imb: TRAIN_TABLE = bank_train_2016
+lr_sre16_bank_tf-idf-delta_imb: MODEL_NAME = tf_idf_delta
+lr_sre16_bank_tf-idf-delta_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta_imb: core
+
+lr_sre16_bank_tf-idf-delta-bm25_imb: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta-bm25_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta-bm25_imb: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta-bm25_imb: TRAIN_TABLE = bank_train_2016
+lr_sre16_bank_tf-idf-delta-bm25_imb: MODEL_NAME = tf_idf_delta_bm25
+lr_sre16_bank_tf-idf-delta-bm25_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta-bm25_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta-bm25_imb: core
+
+lr_sre16_bank_tf-idf-delta-smoothed_imb: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta-smoothed_imb: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta-smoothed_imb: TRAIN_TABLE = bank_train_2016
+lr_sre16_bank_tf-idf-delta-smoothed_imb: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre16_bank_tf-idf-delta-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta-smoothed_imb: core
+
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: TRAIN_TABLE = bank_train_2016
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta-prop-smoothed_imb: core
+
+lr_sre16_bank_tf-idf_bal: TASK_TYPE = bank
+lr_sre16_bank_tf-idf_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf_bal: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf_bal: TRAIN_TABLE = bank_train_balanced_2016
+lr_sre16_bank_tf-idf_bal: MODEL_NAME = tf_idf
+lr_sre16_bank_tf-idf_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf_bal: core
+
+lr_sre16_bank_tf-idf-delta_bal: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta_bal: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta_bal: TRAIN_TABLE = bank_train_balanced_2016
+lr_sre16_bank_tf-idf-delta_bal: MODEL_NAME = tf_idf_delta
+lr_sre16_bank_tf-idf-delta_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta_bal: core
+
+lr_sre16_bank_tf-idf-delta-bm25_bal: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta-bm25_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta-bm25_bal: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta-bm25_bal: TRAIN_TABLE = bank_train_balanced_2016
+lr_sre16_bank_tf-idf-delta-bm25_bal: MODEL_NAME = tf_idf_delta_bm25
+lr_sre16_bank_tf-idf-delta-bm25_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta-bm25_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta-bm25_bal: core
+
+lr_sre16_bank_tf-idf-delta-smoothed_bal: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta-smoothed_bal: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta-smoothed_bal: TRAIN_TABLE = bank_train_balanced_2016
+lr_sre16_bank_tf-idf-delta-smoothed_bal: MODEL_NAME = tf_idf_delta_smoothed
+lr_sre16_bank_tf-idf-delta-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta-smoothed_bal: core
+
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: TASK_TYPE = bank
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: VOCABULARY_PATH = $(DATA_ROOT)/core/$(TASK_TYPE).voc
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: TEST_TABLE = bank_test_2016
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: TRAIN_TABLE = bank_train_balanced_2016
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: MODEL_NAME = tf_idf_delta_prop_smoothed
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: CLASSIFIER_LIBRARY = liblinear
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: ETALON_RESULT = $(SENTIRUEVAL2016)/$(TASK_TYPE)_etalon_2016.xml
+lr_sre16_bank_tf-idf-delta-prop-smoothed_bal: core
 core:
 	mkdir -p $(MODEL_OUTDIR)
 	# Extracting data
